@@ -22,19 +22,19 @@ test("TC-3: Middle Value", function(assert) {
 });
 
 test("TC-4: Invalid Negative Number", function(assert) {
-  assert.propEqual(convertIntegerToRoman(-1), {value: 0, message: 'Please enter a valid integer', result: false}, "TC-4");
+  assert.propEqual(convertIntegerToRoman(-1), {value: "", message: 'Please enter a valid integer', result: false}, "TC-4");
 });
 
 test("TC-5: Invalid Zero", function(assert) {
-  assert.propEqual(convertIntegerToRoman(0), {value: 0, message: 'Out of range (1-3999)', result: false}, "TC-5");
+  assert.propEqual(convertIntegerToRoman(0), {value: "", message: 'Out of range (1-3999)', result: false}, "TC-5");
 });
 
 test("TC-6: Invalid Type (String)", function(assert) {
-  assert.propEqual(convertIntegerToRoman("X"), {value: 0, message: 'Please enter a valid integer', result: false}, "TC-6");
+  assert.propEqual(convertIntegerToRoman("X"), {value: "", message: 'Please enter a valid integer', result: false}, "TC-6");
 });
 
 test("TC-7: Out of Range High", function(assert) {
-  assert.propEqual(convertIntegerToRoman(4000), {value: 0, message: 'Out of range (1-3999)', result: false}, "TC-7");
+  assert.propEqual(convertIntegerToRoman(4000), {value: "", message: 'Out of range (1-3999)', result: false}, "TC-7");
 });
 
 
