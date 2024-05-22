@@ -1,14 +1,13 @@
 <html>
   <head>
-    <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GND0EX8FZ2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GND0EX8FZ2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-    gtag('config', 'G-GND0EX8FZ2');
-  </script>
+      gtag('config', 'G-GND0EX8FZ2');
+    </script>
     <script src="romans.js"></script>
     <link rel="stylesheet" href="romans.css">
   </head>
@@ -17,15 +16,16 @@
       <section class="content">
         <h1>Roman To Integer</h1>
         <div class="group">
-          <input type="checkbox" name="mode-selector" />
+          <input type="checkbox" name="mode-selector" onclick="gtag('event', 'change_mode', {'event_category': 'interaction', 'event_label': 'mode_selector'});" />
           <label for="mode-selector">Change Mode</label>
         </div>
         <div class="group">
-          <input type="text" name="conversion-input" />
+          <input type="text" name="conversion-input" onblur="gtag('event', 'input_text', {'event_category': 'interaction', 'event_label': 'conversion_input'});" />
         </div>
-        <span class="convert-button">Convert</span>
+        <span class="convert-button" onclick="gtag('event', 'click', {'event_category': 'interaction', 'event_label': 'convert_button'});">Convert</span>
         <p class="convert-output"></p>
       </section>
     </main>
   </body>
 </html>
+
